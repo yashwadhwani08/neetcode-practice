@@ -28,5 +28,7 @@ class Solution:
         if len(opening_bracket_arr) != 0:
             return False
         return True
+    # TC - O(n)
+    # SC - O(n)
 
 # URL - https://neetcode.io/problems/validate-parentheses
