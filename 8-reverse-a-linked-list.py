@@ -33,6 +33,9 @@ class Solution2:
         head.next = None  # Break the original link
         # print(new_head.val)  # Print the value of the new head
         return new_head  # Return the new head
+    
+    # TC - O(n)
+    # SC - O(n) due to recursion stack
 
 
 head = ListNode(0)
@@ -41,4 +44,6 @@ head.next.next = ListNode(2)
 head.next.next.next = ListNode(3)
 
 list = Solution2()
-reversed_ll = list.reverseList(head)  
+reversed_ll = list.reverseList(head)
+
+# URL - https://neetcode.io/problems/reverse-a-linked-list
