@@ -41,9 +41,9 @@ class Solution2:
     def mergeTwoLists(
         self, list1: Optional[ListNode], list2: Optional[ListNode]
     ) -> Optional[ListNode]:
-        if list1 and not list2:
+        if not list2:
             return list1
-        elif list2 and not list1:
+        if not list1:
             return list2
         if list1.val < list2.val:
             list1.next = self.mergeTwoLists(list1.next, list2)
