@@ -5,7 +5,7 @@ class Solution:
         opening_bracket_arr = []
         for char in s:
             if char == "(" or char == "[" or char == "{":
-                opening_bracket_arr.append(char)                
+                opening_bracket_arr.append(char)
             elif len(opening_bracket_arr) != 0 and (
                 char == ")" or char == "]" or char == "}"
             ):
@@ -13,13 +13,13 @@ class Solution:
 
                 if char == ")":
                     if stack_top != "(":
-                        return False                    
+                        return False
                 elif char == "]":
                     if stack_top != "[":
-                        return False                    
+                        return False
                 elif char == "}":
                     if stack_top != "{":
-                        return False                    
+                        return False
             elif len(opening_bracket_arr) == 0 and (
                 char == ")" or char == "]" or char == "}"
             ):
@@ -28,7 +28,9 @@ class Solution:
         if len(opening_bracket_arr) != 0:
             return False
         return True
+
     # TC - O(n)
     # SC - O(n)
+
 
 # URL - https://neetcode.io/problems/validate-parentheses
