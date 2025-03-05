@@ -1,6 +1,7 @@
+import bisect
 from typing import List
 
-
+# ITERATION
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         left_index = 0
@@ -19,7 +20,8 @@ class Solution:
         return -1
     # TC - O(logn)
     # SC - O(1)
-    
+
+# RECURSION
 class Solution2:
     def search(self, nums: List[int], target: int) -> int:
         left_index =  0
@@ -44,4 +46,16 @@ class Solution2:
     
     # TC - O(logn)
     # SC - O(logn) -- Stack space
+    
+
+# BUILT IN function python
+class Solution3:
+    def search(self, nums, target):
+        index = bisect.bisect_left(nums, target)
+        if index < len(nums) and nums[index] == target:
+            return index
+        return -1
+    
+    # TC - O(logn)
+    # SC - O(1)
             
